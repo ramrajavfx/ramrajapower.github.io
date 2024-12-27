@@ -1,0 +1,148 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Container for the verification page */
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Heading */
+h1 {
+  color: #fc6100;
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+h2 {
+  color: #060a2e;
+  margin-bottom: 1rem;
+}
+
+/* Text under the heading */
+p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Links to YouTube and Instagram */
+.links {
+  margin-bottom: 1.5rem;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, transform 0.3s;
+  font-size: 1.2rem;
+}
+
+.links a i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 3D effect */
+}
+
+.links a .youtube-icon {
+  color: #FF0000; /* YouTube original color */
+}
+
+.links a .instagram-icon {
+  color: #C13584; /* Instagram original color */
+}
+
+/* Checkbox container styling */
+.checkbox-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.checkbox-container input {
+  margin-right: 0.5rem;
+}
+
+/* Button styling */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #5C6BC0;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.btn.enabled {
+  opacity: 1;
+}
+
+/* Adjust size of the logo */
+.small-logo {
+  width: 150px;  /* Adjust the width as needed */
+  height: auto;
+}
+
+/* Center the content */
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Center the social media links */
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 18px;
+  margin: 10px;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fdb01b;  /* Set hover color to match your logo color */
+}
+
+.social-links i {
+  font-size: 30px;  /* Set icon size */
+  margin-right: 10px;
+}
+
+/* YouTube and Instagram icon colors */
+.youtube-icon {
+  color: #FF0000;  /* YouTube Red */
+}
+
+.instagram-icon {
+  color: #C13584;  /* Instagram Purple */
+}
+
+.logo {
+    width: 150px;
+    margin: 0 auto 20px; /* Center the logo horizontally */
+    display: block; /* Ensure the logo is a block-level element */
+}

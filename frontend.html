@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="formValidation.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<style>
+    /* Add styles for the logo size */
+    .image-container img {
+      width: 350px;  /* Set the width of the logo */
+      height: auto;  /* Maintain the aspect ratio */
+    }
+  </style>
+  </head>
+<body>
+  <div class="container">
+     <!-- Image Display -->
+    <div class="image-container">
+      <img src="logoup.png" alt="logoup" class="logo-icon small-logo">
+    </div>
+    <h2>उत्तर प्रदेश की नंबर 1 सोलर कंपनी</h2>
+    <h2>राम राजा सोलर एनर्जी</h2>
+		<h2>झाँसी महोत्सव में आपका हार्दिक स्वागत करती है।</h2>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.youtube.com/channel/UCT3xXIm_ZcSrBwaSMfjSX-w" target="_blank" onclick="markAction('youtube')">
+        <i class="fab fa-youtube youtube-icon"></i> YouTube
+      </a><br>
+      <a href="https://www.instagram.com/ramraja_solarenergy" target="_blank" onclick="markAction('instagram')">
+        <i class="fab fa-instagram instagram-icon"></i> Instagram
+      </a><br>
+      <a href="https://www.facebook.com/ramrajasolarenergyjhansi/" target="_blank" onclick="markAction('facebook')">
+        <i class="fab fa-facebook-f facebook-icon"></i> Facebook
+      </a>
+    </div>
+
+    <div class="checkbox-container" id="checkboxContainer">
+      <input type="checkbox" id="confirm" onclick="toggleButton()">
+      <label for="confirm">मैंने subscribed और followed कर लिया है </label>
+    </div>
+    <p>लकी ड्रा में भाग लेने के लिए पंजीकरण करे</p>
+    <button class="btn" id="proceedButton" onclick="proceedToForm()" disabled>पंजीकरण करे</button>
+  </div>
+
+  <script>
+    let youtubeClicked = false;
+    let instagramClicked = false;
+    let facebookClicked = false;
+
+    function markAction(platform) {
+      if (platform === 'youtube') {
+        youtubeClicked = true;
+      } else if (platform === 'instagram') {
+        instagramClicked = true;
+      } else if (platform === 'facebook') {
+        facebookClicked = true;
+      }
+
+      // Show the checkbox only if all platforms are clicked
+      if (youtubeClicked && instagramClicked && facebookClicked) {
+        document.getElementById('checkboxContainer').style.display = 'flex';
+      }
+    }
+
+    function toggleButton() {
+      const checkbox = document.getElementById('confirm');
+      const button = document.getElementById('proceedButton');
+      if (checkbox.checked) {
+        button.disabled = false;
+        button.classList.add('enabled');
+      } else {
+        button.disabled = true;
+        button.classList.remove('enabled');
+      }
+    }
+
+    function proceedToForm() {
+      window.location.href = 'https://ramrajasolar.github.io/'; // Updated form link
+    }
+  </script>
+
+</body>
+</html>
